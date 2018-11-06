@@ -40,6 +40,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 gem 'jquery-rails'
 gem 'active_link_to'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'pry', '~> 0.12.0'
