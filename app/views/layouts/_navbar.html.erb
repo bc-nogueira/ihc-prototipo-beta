@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <%= link_to 'SolicitaUFF', root_path, class: 'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown <%= 'active' if teste %>">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Período de Ajuste
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= active_link_to 'Inscrição em Disciplina', ajuste_inscricao_path,
+                             class: 'dropdown-item' %>
+          <%= active_link_to 'Trocar de Turma', ajuste_troca_path,
+                             class: 'dropdown-item' %>
+          <%= active_link_to 'Cancelar Turma', ajuste_cancelamento_path,
+                             class: 'dropdown-item' %>
+        </div>
+      </li>
+      <li class="nav-item">
+        <%= active_link_to 'Aproveitamento de Disciplina', aproveitamento_index_path,
+                           class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= active_link_to 'Atividade Complementar', ac_index_path,
+                           class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= active_link_to 'Minhas Solicitações', solicitacoes_index_path,
+                           class: 'nav-link' %>
+      </li>
+    </ul>
+  </div>
+</nav>
